@@ -1,7 +1,7 @@
 # Passwordless-SSH-on-a-Raspberry-Pi
 Set up passwordless SSH for connecting to your Raspberry Pi
 
-This is a modified version of the tutorial published by Alex Eames at[RasPi.TV](http://raspi.tv/2012/how-to-set-up-keys-and-disable-password-login-for-ssh-on-your-raspberry-pi), modified for Putty (he uses BitVise tunneler), and also stored on my GitHub page because I can never find these tutorials the second time around.
+This is a modified version of the tutorial published by Alex Eames at [RasPi.TV](http://raspi.tv/2012/how-to-set-up-keys-and-disable-password-login-for-ssh-on-your-raspberry-pi), modified for Putty (he uses BitVise tunneler), and also stored on my GitHub page because I can never find these tutorials the second time around.
 
 The purpose of this guide is to explain how to set up passwordless SSH for accessing your Pi.  You can remotely control a Pi through SSH, where you connect with an SSH client, log in and then gain access to a terminal on the Pi.  However, humans like to use easily remembered (and therefore quite simple) passwords, while secure passwords tend to be far too large and complex to remember.  To remedy this, you can use passwordless SSH.  This involves generating a pair of public and private cryptography keys, and giving the Pi the public section of the key.  When you try to log in the Pi and your computer will compare the keys to make sure you are who you say you are, rather than asking for a password.  This means that you don't have to remember a password and also means that there is no password to hack: as long a you keep the private section of your key safe, the Pi will be secure.
 
@@ -9,7 +9,7 @@ The purpose of this guide is to explain how to set up passwordless SSH for acces
 2)  Run PuTTYGen.  On the UI which opens, there should be a button labelled "Generate" in the Actions section.  Press this, and it will ask you to move your mouse around the blank area to create randomness.  After a few moments of this it will generate keys and open a new page of the UI.
 3)  The larger window at the top named "Public key for pasting into OpenSSH authorizzed_keys file" is the key which needs to be transferred to the Pi.  
 
-![PuTTYGen](https://github.com/shoe-pi/Pi-setup-guides/tree/master/passwordless-ssh/1.jpg)
+![PuTTYGen](https://github.com/shoe-pi/Pi-setup-guides/tree/master/Passwordless-ssh/1.jpg)
 
 4)  SSH into your pi using PuTTY: open the program, enter your Pi's I.P. address into the "Host name or IP address" box and press "open".  If you don't know your Pi's I.P. address you may need to log in to your router and find the page where it lists that.  PuTTY should ask you to log in to your Pi using your username and password before opening a terminal where you can type commands.  Type `cd ~` and hit Enter to go to your home directory, then type `mkdir .ssh` and hit enter to create a directory called `.ssh`, and finally type `cd .ssh` and hit Enter to open that directory.
 5)  Type `nano authorized_keys` and hit Enter to create and open a file called `authorized_keys`.  **Note the American spelling of authorized: this won't work with the UK spelling.**  Copy the Public key from PuTTYGen and paste it into `authorized_keys` on the Pi.  Save and close the file with `Ctrl-X` and `Y`.
