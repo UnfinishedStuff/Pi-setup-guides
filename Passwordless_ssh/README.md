@@ -22,7 +22,7 @@ For security reasons, once this is set up it's a good idea to disable password a
 
 10)  On the Pi, run `sudo nano /etc/ssh/sshd_config` in the terminal.  Somewhere in that file is the line `#PasswordAuthentication yes`.  Uncomment it and change it to `no`, so that it looks like this: `PasswordAuthentication no`.  Save and close the file.
 
-#Setting up a profile for your Pi
+# Setting up a profile for your Pi
 
 Rather than having to select the Private key and type in the Pi's I.P. address every time you can use PuTTY to set up a profile for the Pi.  This means taht you just have to select the profile and it will load the location of the Private key, the username to log in with and the Pi's I.P. address.
 
