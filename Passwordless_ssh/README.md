@@ -9,7 +9,7 @@ The purpose of this guide is to explain how to set up passwordless SSH for acces
 2)  Run PuTTYGen.  On the UI which opens, there should be a button labelled "Generate" in the Actions section.  Press this, and it will ask you to move your mouse around the blank area to create randomness.  After a few moments of this it will generate keys and open a new page of the UI.
 3)  The larger window at the top named "Public key for pasting into OpenSSH authorizzed_keys file" is the key which needs to be transferred to the Pi.  
 
-![PuTTYGen](https://github.com/shoe-pi/Pi-setup-guides/tree/master/Passwordless-ssh/1.jpg)
+![PuTTYGen](https://github.com/Shoe-Pi/Pi-setup-guides/blob/master/Passwordless_ssh/1.jpg)
 
 4)  SSH into your pi using PuTTY: open the program, enter your Pi's I.P. address into the "Host name or IP address" box and press "open".  If you don't know your Pi's I.P. address you may need to log in to your router and find the page where it lists that.  PuTTY should ask you to log in to your Pi using your username and password before opening a terminal where you can type commands.  Type `cd ~` and hit Enter to go to your home directory, then type `mkdir .ssh` and hit enter to create a directory called `.ssh`, and finally type `cd .ssh` and hit Enter to open that directory.
 5)  Type `nano authorized_keys` and hit Enter to create and open a file called `authorized_keys`.  **Note the American spelling of authorized: this won't work with the UK spelling.**  Copy the Public key from PuTTYGen and paste it into `authorized_keys` on the Pi.  Save and close the file with `Ctrl-X` and `Y`.
