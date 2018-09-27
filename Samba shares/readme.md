@@ -1,4 +1,4 @@
-#Sharing files on the Pi over the network via Samba
+# Sharing files on the Pi over the network via Samba
 
 This is mostly a copy of the guide provided by MagPi magazine, available [here](https://www.raspberrypi.org/magpi/samba-file-server/).
 
@@ -10,13 +10,13 @@ This walks you through how to set up a folder on the Pi which is shared over the
 
 3) You then need to tell Samba that you want it to share the folder by editing Samba's configuration file.  Run `sudo nano /etc/samba/smb.conf` in a terminal.  This should open a file which already contains a lot of text.  Skip to the bottom and add the following:
 ```
-    [A Shared Folder]             #Give your shared folder a name
-    Comment = Pi shared folder    #A comment describing what the folder is for
-    Path = /share                 #The path to the folder
-    Writeable = Yes               #Can other people write to it?
-    create mask = 0777            #What rights do other people have with files created in the folder?
-    directory mask = 0777         #What rights do other people have with folders created in the folder?
-    Guest ok = yes                #If this is set to `yes` then visitors don't have to be logged in to access the folder.
+[A Shared Folder]             #Give your shared folder a name
+Comment = Pi shared folder    #A comment describing what the folder is for
+Path = /share                 #The path to the folder
+Writeable = Yes               #Can other people write to it?
+create mask = 0777            #What rights do other people have with files created in the folder?
+directory mask = 0777         #What rights do other people have with folders created in the folder?
+Guest ok = yes                #If set to `yes` then visitors don't have to log in to access the folder.
 ```
 There are many many more settings which can be tweaked here.  Check out the [samba.conf configuration manual](https://www.samba.org/samba/docs/current/man-html/smb.conf.5.html) for more details.  To create more than one chared folder simply copy and paste the configuration text for each folder.
 
