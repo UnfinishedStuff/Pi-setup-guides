@@ -18,7 +18,7 @@ This walks you through how to set up a folder on the Pi which is shared over the
     directory mask = 0777         #What rights do other people have with folders created in the folder?
     Guest ok = yes                #If this is set to `yes` then visitors don't have to be logged in to access the folder.
 ```
-    There are many many more settings which can be tweaked here.  Check out the [samba.conf configuration manual](https://www.samba.org/samba/docs/current/man-html/smb.conf.5.html) for more details.  To create more than one chared folder simply copy and paste the configuration text for each folder.
+There are many many more settings which can be tweaked here.  Check out the [samba.conf configuration manual](https://www.samba.org/samba/docs/current/man-html/smb.conf.5.html) for more details.  To create more than one chared folder simply copy and paste the configuration text for each folder.
 
 4) Before it can be run Samba needs a password for users.  We won't use this to access out file, but if you ever configured your Samba shares to require people to log in before accessing the files you'd need this password.  Run `sudo smbpasswd -a pi` and follow the prompts.
 
