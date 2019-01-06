@@ -29,20 +29,26 @@ This sets the country which the device is operating in, as different countries h
 
 Setting this to `1` allows this configuration file to overwrite previous settings.
 
+
 * `ctrl_interface=/var/run/wpa_supplicant`
+
 I can't quite find a good explaination for what this does: apparently it is for controlling who/what can access the network interface.  Presumably not specifying a group means anyone/thing can access it?
+
 
 * `network={    }`
 
 This contains the details of the connection, like the network name and password.
 
+
 * `scan_ssid=1`
 
 This controls how the hardware on your board searches for a WiFi network to connect.  In short, a value of `1` should be able to connect to networks with certain security features enabled, but may be more slow.
 
+
 * `ssid="Name_of_network_to_connect_to"`
 
 You should enter the name of the network you want to connect to here, exactly as it is set on your router.  If in doubt, check something like a tablet or phone which is also connected.
+
 
 * `psk="Network_password"`
 
