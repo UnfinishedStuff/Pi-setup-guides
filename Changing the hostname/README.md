@@ -4,7 +4,7 @@ The Hostname is a name for a machine connected to a network, and helps to distin
 
 The default hostname for Raspberry Pi boards is `raspberrypi`, but this gets confusing if you have several Pi boards running at a time.  For example, I have a Zero running PiHole at all times, and I need to make sure that I'm not editing files on that machine when I'm trying to develop code on my 3A+.  To avoid this, I call the Zero `PiHole` and the 3A+ `3Aplus`, so I can clearly distinguish which is which.
 
-(Wikipedia)[https://en.wikipedia.org/wiki/Hostname] suggests that you can have any hostname as long as it is only made of the characters `a` to `z`, `A` to `Z`, `0` to `9` and `-` (although it can't start with a `-`).
+[Wikipedia](https://en.wikipedia.org/wiki/Hostname) suggests that you can have any hostname as long as it is only made of the characters `a` to `z`, `A` to `Z`, `0` to `9` and `-` (although it can't start with a `-`).
 
 To change the hostname:
 
