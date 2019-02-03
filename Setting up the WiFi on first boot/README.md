@@ -1,7 +1,7 @@
 This guide explains how to set up the WiFi on models of Raspberry Pi with built-in WiFi without having to boot the Pi.  It's useful for setting up "headless" systems (which don't have a monitor), as you can get the device to automatically connect to the WiFi without having to use something like USB mode or a serial cable to modify the files first.  This guide was mostly copied from the guide by [Matt Hawkins](https://www.raspberrypi-spy.co.uk/2017/04/manually-setting-up-pi-wifi-using-wpa_supplicant-conf/), and kept here for future reference/tweaks.
 
 1) Write the latest version of Raspbian/NOOBS to a microSD card in the usual manner.
-2) Create a file on the `/boot` partition called `WPA-supplicant.conf`.
+2) Create a file on the `/boot` partition called `wpa_supplicant.conf`.
 3) Edit this file with something like Notepad (*not* Microsoft Word, you need a simple text editor, not a document editor) and paste the following in:
 
 ```
